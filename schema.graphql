@@ -18,12 +18,10 @@ type StarterEntity @entity {
 
 type StakingReward @entity{
 id: ID! #blockHeight-eventIdx
-account: String!
+account: SumReward!
 balance: BigInt!
 date: Date!
-blockHeight: Int!
 }
-
 
 type SumReward @entity{
 id: ID! # AccountId
