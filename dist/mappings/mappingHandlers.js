@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.handleSumRewarded = exports.handleStakingRewarded = void 0;
+exports.handleStakingReward = exports.handleSumReward = exports.handleSumRewarded = exports.handleStakingRewarded = void 0;
 const types_1 = require("../types");
 const types_2 = require("../types");
 async function handleStakingRewarded(event) {
@@ -28,3 +28,11 @@ async function handleSumRewarded(event) {
     await entity.save();
 }
 exports.handleSumRewarded = handleSumRewarded;
+async function handleSumReward(event) {
+    await handleSumRewarded(event);
+}
+exports.handleSumReward = handleSumReward;
+async function handleStakingReward(event) {
+    await handleStakingRewarded(event);
+}
+exports.handleStakingReward = handleStakingReward;
